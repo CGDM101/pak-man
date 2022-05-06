@@ -1,3 +1,1 @@
 # pak-man
-
-test igen
