@@ -1,5 +1,5 @@
 const Start = () => (
-    <p>Välkommen till pak-man nostalgia game hub</p>
+    <p>Welcome to pak-man nostaliga game hub</p>
 )
 
 export default Start
