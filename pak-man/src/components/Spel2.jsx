@@ -1,5 +1,9 @@
-const Spel2 = () => (
-    <p>Spel 2</p>
-)
+function Spel2 () {
 
+    return(
+        <div>
+            <p>Spel 2</p>
+        </div>
+    )
+}
 export default Spel2
