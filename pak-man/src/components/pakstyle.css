@@ -1,0 +1,55 @@
+body
+{
+	background-color: #f0f0f0;
+}
+.labyrinth
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 500px;
+	height: 500px;
+	background-color: #000000;
+	border: 5px ridge  whitesmoke;
+}
+
+.pacman
+{
+	position: absolute;
+	top: 51px;
+	left: 51px;
+
+	color: #ffffff;
+}
+.inky
+{
+	position: absolute;
+	top: 200px;
+	left: 50px;
+
+	color: #ffffff;
+}
+.pinky
+{
+	position: absolute;
+	top: 300px;
+	left: 200px;
+
+	color: #ffffff;
+}
+.clyde
+{
+	position: absolute;
+	top: 500px;
+	left: 300px;
+
+	color: #ffffff;
+}
+.inner-labyrinth {
+	display: grid;
+	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+	grid-template-rows:    50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;	
+	column-gap: 0px;
+	row-gap: 0px;
+
+  }

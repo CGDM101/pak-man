@@ -1,0 +1,24 @@
+1)Spelregler:
+
+		§ 1.1 Tidhållighet.
+			
+			§1.1 meddela om sen - Discord
+		§ 1.2 be om hjälp vid behov
+			
+			§1.2.1 även fr annan grupp
+		
+		§ 1.3 lysna, inte prata i mun på varandra
+		
+		§ 1.4 Get to done
+		
+			§ 1.4.1 Förbättra produkt efter nått sprintmål
+		
+		§ 1.5 pusha ofta till egen branch, pullrequest när klar med funktion
+		
+		§ 1.6 ha kul.
+		
+--------------------------------------------------------------------
+		
+		
+		
+		
