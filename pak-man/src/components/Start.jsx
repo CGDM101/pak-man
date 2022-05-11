@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, NavLink, Routes, Route, Navigate } from 'react-router-dom'
+import TicTacToe from './TicTacToe'
 
 
 function Start () {
@@ -13,8 +14,8 @@ function Start () {
           <article>Article</article>
           <nav>
             <div><NavLink to="/Spel1">Pack-man  </NavLink></div>
-            <div>spel 1</div>
-            <div>Spel 2</div>
+            <div><NavLink to="/Spel2">spel2  </NavLink></div>
+            <div><NavLink to="/Spel3">tictactoe  </NavLink></div>
           </nav>
           <aside>
             Author
