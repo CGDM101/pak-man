@@ -4,6 +4,7 @@ import Spel1 from './components/Spel1'
 import Spel2 from './components/Spel2'
 import Start from './components/Start'
 import TicTacToe from './components/TicTacToe'
+import BattleShip from './components/Battleship'
 
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
           <Route path="/Spel1" element={<Spel1/>} />
           <Route path="/Spel2" element={<Spel2/>} />
           <Route path="/Spel3" element={<TicTacToe/>} />
+          <Route path="/Spel4" element={<BattleShip/>} />
+          {/* <Route path="/Spel5" element={<TicTacToe/>} />
+          <Route path="/Spel6" element={<BattleShip/>} /> */}
 
         </Routes>
     </div>
