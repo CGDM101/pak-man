@@ -14,7 +14,7 @@ function Start () {
           <nav>
             <div><NavLink to="/Spel1"> PAC MAN </NavLink></div>
             <div><NavLink to="/Spel2"> TIC TAC TOE </NavLink></div>
-            <div> spel 3 </div>
+            <div><NavLink to="/Spel3"> SNAKE </NavLink></div>
           </nav>
           <aside>
             Author

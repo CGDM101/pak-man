@@ -2,6 +2,7 @@ import './App.css'
 import {BrowserRouter as Router, NavLink, Routes, Route, Navigate} from 'react-router-dom'
 import Spel1 from './components/Spel1'
 import Spel2 from './components/Spel2'
+import Spel3 from './components/Spel3'
 import Start from './components/Start'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Start />} />
           <Route path="/Spel1" element={<Spel1/>} />
           <Route path="/Spel2" element={<Spel2/>} />
+          <Route path="/Spel3" element={<Spel3/>} />
         </Routes>
     </div>
   </Router>
