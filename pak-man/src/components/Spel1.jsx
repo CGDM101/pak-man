@@ -2,11 +2,7 @@ function Spel1 () {
 
     return(
         <div>
-            <p>Spel 1</p>
-
-            <a href="https://playtictactoe.org/"> TIC TAC TOE </a>
-
-
+            <a href="https://www.webretrogames.com/pacman-html5.php"> PAC MAN </a>
         </div>
     )
 }

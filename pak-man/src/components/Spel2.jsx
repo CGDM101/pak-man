@@ -2,8 +2,7 @@ function Spel2 () {
 
     return(
         <div>
-            <p>Spel 2</p>
-            {/* <a href=""></a> */}
+            <a href="https://playtictactoe.org/"> TIC TAC TOE </a>
         </div>
     )
 }
