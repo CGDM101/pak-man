@@ -73,7 +73,7 @@ window.addEventListener('keydown', (e) => state[e.key] = true);
 //----------------
  
 setInterval(listenAndMove,1);
-setInterval(moveGhosts,1);
+// setInterval(moveGhosts,1);
  
 function moveGhosts(){
 	// if ( pinkyY===pinkyTargetY && pinkyX === pinkyTargetX){
@@ -108,6 +108,17 @@ function moveGhosts(){
 // console.log("I do noting!")
 }
  
+
+function checkVisited(){
+	for( let e=0 ; e <10 ; e++){
+		for (let f=0 ; f <10 ; f++){
+			if (!visited[e][f]){
+				return false
+			}
+		}
+	}
+	return true
+}
 
 function listenAndMove()
 {
@@ -185,22 +196,25 @@ function listenAndMove()
 			y-=2
 		}
 	}
+	moveGhosts()
 	pacman.style.left=x+"px";
 	pacman.style.top=y+"px";
 	pinky.style.left=pinkyX+"px";
 	pinky.style.top=pinkyY+"px";
 	let count=1
-	//inner-labyrinth
+	 
 	for ( let c=0; c <10 ; c++){
 			for (d=0; d<10;d++){
-				// if ( visited[c][d] && !maze[c][d]){
-				if ( maze[c][d]){
-				// if ( true){
+				if ( visited[c][d] && !maze[c][d]){
+				// if ( maze[c][d]){
+ 
+				// if (c===2 && d===2){
 					//const third = document.querySelector('#parent :nth-child(3)');
 					let child=document.querySelector('#inner-labyrinth :nth-child('+count+')')
-					console.log(child)
-					count++
+					// console.log("count:",count,"c",c,"d",d, "child",child)
+					child.src="empty.png"
 				}
+				count++
 			}
 		
 	}
@@ -212,6 +226,11 @@ function listenAndMove()
 	 
 	alert("Game Over");
 	window.location.reload(true);
+	}
+	let status=checkVisited()
+	if (status ){
+		alert("You Beat the Game!");
+		window.location.reload(true);
 	}
  } 
 }
