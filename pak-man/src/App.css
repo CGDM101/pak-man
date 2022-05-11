@@ -1,6 +1,6 @@
 body{
-  background-color: #d8dede;
-  background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
 
 
@@ -8,31 +8,75 @@ main {
   display: grid;
   grid-template-areas: 
     "topbar  topbar   topbar"
-    "ads     content  sidebar"
+    "sidebar     content  ads"
     "footer  footer   footer";
 
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 70px 27em 70px;
+    grid-template-rows: auto 300px  70px;
 
-    align-items: center;
-    justify-items: center;
+    gap: 1rem;
+    text-align: center;
   ;
 
 }
 
-header  {grid-area: topbar;}
-aside   {grid-area: ads;}
-article {grid-area: content;}
-nav     {grid-area: sidebar;}
-footer  {grid-area: footer;}
-
-
-
-.App {
-  text-align: center;
+header  {
+  grid-area: topbar;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: #070706;
+  color: #2c8c2b;
+  width: 100%;
+  height: 150px;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 3rem;
 }
 
 
+nav     {
+  grid-area: sidebar;
+  align-items: top;
+}
+
+nav div{
+  padding: 10px;
+  margin:  15px;
+  border-style: solid;
+  border-color: #282c34;
+}
+
+nav 
+
+article {
+  grid-area: content;
+}
+
+aside   {
+  grid-area: ads;
+}
+
+aside div{
+  padding: 10px;
+  margin:  15px;
+}
+
+footer  {
+  grid-area: footer;
+  border-top: #282c34 solid 5px;
+}
+
+
+
+/* .App {
+  text-align: center;
+} */
+
+.title{
+  padding: 10px;
+  margin:  15px;
+}
 
 .App-header {
   background-color: #282c34;

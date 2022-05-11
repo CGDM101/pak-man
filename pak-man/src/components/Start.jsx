@@ -1,14 +1,24 @@
+import { BrowserRouter as Router, NavLink, Routes, Route, Navigate } from 'react-router-dom'
+
+
 function Start () {
 
     return(
         <div className="App">
         <main>
           <header>
-          <p>main</p> <p>Home page</p>
+          <img src="https://i.ibb.co/2qn1pGv/Arcade-game.png" alt="" width={200} height={150} /> 
+          <h1 className="title">SPELHUBB</h1>
           </header>
           <article>Article</article>
-          <aside>Author</aside>
-          <nav>Sidebar</nav>
+          <nav>
+            <div><NavLink to="/Spel1">Pack-man</NavLink></div>
+            <div>spel 1</div>
+            <div>Spel 2</div>
+          </nav>
+          <aside>
+            Author
+          </aside>
           <footer>Footer</footer>
         </main>
       </div>
