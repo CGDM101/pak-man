@@ -12,7 +12,7 @@ function Start () {
           </header>
           <article>Article</article>
           <nav>
-            <div><NavLink to="/Spel1">Pack-man</NavLink></div>
+            <div><NavLink to="/Spel1">Pack-man  </NavLink></div>
             <div>spel 1</div>
             <div>Spel 2</div>
           </nav>
