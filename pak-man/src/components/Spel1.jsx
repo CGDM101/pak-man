@@ -7,7 +7,8 @@ function Spel1 () {
  				<div className="labyrinth">
  
  					<div className="inner-labyrinth">
-
+					 
+			 		<div id="inky"><img src="Inky.png"/></div>
 
 
  					</div>
