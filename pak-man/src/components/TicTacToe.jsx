@@ -1,6 +1,8 @@
 const TicTacToe = () => {
     return (
-        <p>hej från tictactoe-komponenten</p>
+        <div>
+            <p>hej från tictactoe-komponenten</p>
+        </div>
     )
 }
 
