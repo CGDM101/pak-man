@@ -10,16 +10,26 @@ function Start () {
           <img src="https://i.ibb.co/2qn1pGv/Arcade-game.png" alt="" width={200} height={150} /> 
           <h1 className="title">SPELHUBB</h1>
           </header>
-          <article>Article</article>
+          <article>
+
+          </article>
           <nav>
-            <div><NavLink to="/Spel1">Pack-man</NavLink></div>
-            <div>spel 1</div>
-            <div>Spel 2</div>
+            <div>
+            <a href="https://stirring-dodol-875e35.netlify.app/">PACMAN</a>
+            </div>
+            <div>
+              <a href="https://playsnake.org/?msclkid=7c3f6cadd15711ec851ff395b16ea1d1">SNAKE</a>
+            </div>
+            <div>
+              <a href="https://playtictactoe.org/">TIC TAC TOE</a>
+            </div>
           </nav>
           <aside>
-            Author
+            
           </aside>
-          <footer>Footer</footer>
+          <footer>
+
+          </footer>
         </main>
       </div>
     )

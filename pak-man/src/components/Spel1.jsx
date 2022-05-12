@@ -1,13 +1,9 @@
-function Spel1 () {
 
-    return(
-        <div>
-            <p>Spel 1</p>
+function Spel1() {
+  return (
+	<div>
+	  <h1>Spel 1</h1>
+	  </div>
+  )}
 
-            {/* <a href="https://playtictactoe.org/"> TIC TAC TOE </a> */}
-
-
-        </div>
-    )
-}
-export default Spel1
+  export default Spel1;
