@@ -1,4 +1,4 @@
-import './tictactoe.js'
+// import './tictactoe.js'
 
 const TicTacToe = () => {
     return (

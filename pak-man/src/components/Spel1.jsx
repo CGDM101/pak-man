@@ -1,3 +1,5 @@
+import Square from "./Square"
+
 function Spel1 () {
 
     return(
