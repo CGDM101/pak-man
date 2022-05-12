@@ -1,3 +1,5 @@
+import './tictactoe.js'
+
 const TicTacToe = () => {
     return (
         <div>
