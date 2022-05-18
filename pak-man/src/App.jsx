@@ -3,6 +3,7 @@ import {BrowserRouter as Router, NavLink, Routes, Route, Navigate} from 'react-r
 import Spel1 from './components/Spel1'
 import Spel2 from './components/Spel2'
 import Start from './components/Start'
+import TicTacToeGame from './components/TicTacToeGame'
 
 function App() {
 

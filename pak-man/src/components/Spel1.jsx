@@ -1,8 +1,10 @@
+import TicTacToeGame from './components/TicTacToeGame'
+
 function Spel1 () {
 
     return(
         <div>
-            <p>Spel 1</p>
+            <TicTacToeGame />
         </div>
     )
 }

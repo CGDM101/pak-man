@@ -1,0 +1,38 @@
+body {
+    font: 14px monospace;
+    font-weight: bold;
+    color: #47d962;
+    margin: 100px;
+    background-color: darkgreen;
+  }
+  
+  .status {
+    margin-bottom: 20px;
+  }
+
+  .square {
+    background: #fff;
+    border: 2px solid #47d962;
+    float: left;
+    font-family: monospace;
+    color: #47d962;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+    background-color: darkgreen;
+  }
+
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
