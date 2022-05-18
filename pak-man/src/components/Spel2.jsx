@@ -1,8 +1,10 @@
+import YatzyComponent from "./YatzyComponent"
+
 function Spel2 () {
 
     return(
         <div>
-            <p>Spel 2</p>
+            <YatzyComponent />
         </div>
     )
 }
