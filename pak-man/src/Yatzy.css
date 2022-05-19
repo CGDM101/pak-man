@@ -1,0 +1,67 @@
+body {
+    font: 14px monospace;
+    margin: 20px;
+    background-color: darkgreen;
+    color: #47d962;
+  }
+  
+  .dices {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  }
+  /*mellanrum mellan tärningarna*/
+  .dices button {
+    margin: 0.5em;
+  }
+
+  /*gäller alla knappar med klassen square*/
+  .square {
+    background: darkgreen;
+    border: 2px solid #47d962;
+    float: left;
+    font-size: 15px;  /*14px*/ 
+    font-family: monospace;
+    font-weight: bold   ;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+    color: #47d962; /*färg på pjäserna*/  
+  }
+
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+  
+  /*behövs för att göra de vita knappar i yatsy gröna*/
+  button {
+    width: 10vw;
+    background-color: darkgreen;
+    border: 2px solid #47d962;
+    color: #47d962;
+    font-family: monospace; 
+    /* margin: 0.5em; */
+  }
+  /*för att flexa alla buttons som beräknar*/
+  div .buttons-calc {
+    display: flex;
+    flex-direction: column; 
+  }
+  div .buttons-calc button {
+    margin: 0.5em; /*mellanrum knappar*/
+    /* padding: 0.5em; text till border*/
+  }
+  
+  /*diven för calc-output*/
+  .div-calc-output {
+    margin: 0.5em;
+  }
+  
