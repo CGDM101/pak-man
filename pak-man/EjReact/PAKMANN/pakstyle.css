@@ -13,15 +13,79 @@ body
 	border: 5px ridge  whitesmoke;
 }
 
+
+
 #pacman
 {
 	position: absolute;
 	top: 51px;
 	left: 51px;
+	/* transform: rotate( 90deg); */
 	/* width: 50px;
 	height: 50px; */
 	color: #ffffff;
 }
+#startscreen {
+	font-size:12px;color: #cccccc;
+	text-decoration:none; font-weight:normal;
+	font-size: 16px; font-family: Impact;color: #32CD32; text-shadow:0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #32CD32,0 0 70px #32CD32,0 0 80px #32CD32,0 0 100px #32CD32,0 0 170px #32CD32;text-align:center; line-height:20px;
+	position: absolute;
+	color: green;
+	background-color: black;
+	top: 0px;
+	left: 0px;
+    width: 500px;
+	height: 500px; 
+	z-index: 1; 
+}
+
+ #circle{
+	 position: absolute;
+	 top: 150 px;
+	 left: 150px;
+ }
+ 
+ 
+ 
+#startscreen.hide{
+	display:none
+}
+#startbutton{
+	padding: 10px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 5px;
+	/* border-color: yellow; */
+	border-color: #32CD32;
+	/* color: yellow; */
+	/* background-color: red; */
+	background-color: black;
+	color: #32CD32; text-shadow:0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #32CD32,0 0 70px #32CD32,0 0 80px #32CD32,0 0 100px #32CD32,0 0 170px #32CD32;text-align:center; line-height:20px;
+	font-size:30px;
+	position: absolute;
+	top: 230px;
+	left: 180px;
+}
+#paktext{
+	position: absolute;
+	text-align: center;
+	padding:50px;
+	top: 100px;
+
+}
+#pacman.up {
+	transform: rotate( -90deg); 
+}
+#pacman.down {
+	transform: rotate( 90deg); 
+}
+#pacman.right {
+	transform: rotate( 0deg); 
+}
+#pacman.left {
+	transform: rotate( -180deg); 
+}
+
 #inky
 {
 	position: absolute;
@@ -38,6 +102,29 @@ body
 
 	color: #ffffff;
 }
+#blinky
+{
+	position: absolute;
+	top: 350px;
+	left: 340px;
+	/* width: 150px;
+	height: 150px;  */
+	/* border-style: dotted;
+	border-color: red; */
+	/* margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto; */
+
+	border-radius: 9000em;
+	color: #ffffff;
+}
+/* #bliky > img{
+	  border-style: dotted;
+	border-color: red;
+
+	 border-radius: 9000em;
+} */
 #clyde
 {
 	position: absolute;
@@ -52,6 +139,7 @@ body
 	grid-template-rows:    50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;	
 	column-gap: 0px;
 	row-gap: 0px;
+ 
 
   }
 

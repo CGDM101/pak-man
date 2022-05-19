@@ -5,65 +5,15 @@
     </head>
 
      
-    <!-- <style>
-        body
-        {
-            background-color: #f0f0f0;
-        }
-        #labyrinth
-        {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 500px;
-            height: 500px;
-            background-color: #000000;
-            border: 5px ridge  whitesmoke;
-        }
-
-        #pacman
-        {
-            position: absolute;
-            top: 51px;
-            left: 51px;
-            /* width: 50px;
-            height: 50px; */
-            color: #ffffff;
-        }
-		#inky
-        {
-            position: absolute;
-            top: 200px;
-            left: 50px;
- 
-            color: #ffffff;
-        }
-		#pinky
-        {
-            position: absolute;
-            top: 300px;
-            left: 200px;
- 
-            color: #ffffff;
-        }
-		#clyde
-        {
-            position: absolute;
-            top: 500px;
-            left: 300px;
- 
-            color: #ffffff;
-        }
-		/* #wall
-        {
-            position: absolute;
-            top: 100px;
-            left: 100px;
- 
-            color: #ffffff;
-        } */
-    </style> -->
+   
     <body>
+        <div id="startscreen">
+            <div id="paktext">use the arrow keys to help Pak-Man eat all the orange pills,
+                while avoiding the ghosts.
+            </div>
+            <!-- <h1>PRESS ANY KEY TO START</h1> -->
+            <button id="startbutton" onclick="startgame()">START</button> 
+        </div>
         <div id="labyrinth">
  
             <div id="inner-labyrinth">
@@ -73,13 +23,15 @@
             </div>
             <div id ="pacman">
 				<!-- <img src="Pacman.png"/> -->
-				<img src="Pacmini.png"/>
+				<!-- <img src="Pacmini.png"/> -->
+				<img id ="pacimg" src="pacgif.gif"/>
 				
 			</div>
 			<!-- Their English names are Inky, Blinky, Pinky and Clyde. -->
-			<!--  <div id="inky"><img src="Inky.png"/></div>     -->
-			<div id="pinky"><img src="Pinky.png"/></div> -->
-			<!-- <div id="Blinky"></div> -->
+			 <div id="inky"><img src="Inky.png"/></div>    
+			<div id="pinky"><img src="Pinky.png"/></div> 
+			<div id="blinky"><img src="blinky.png"/></div>
+            <div id="circle"> <img   src="circle.png"/></div>
 			<!-- <div id="clyde"><img src="Clyde.png"/></div> -->
 			<!-- <div id="wall"><img src="wall.png"/></div> -->
         </div>
@@ -87,47 +39,6 @@
 
 
     <script src="pakscript.js"></script> 
-    <!-- <script>
-		let x=0;
-        let y=0;
-		// kopierat från SO, hajar inte...
-		"use strict";
-
-		const is_key_down = (() => {
-   	 	const state = {};
-
-    	window.addEventListener('keyup', (e) => state[e.key] = false);
-    	window.addEventListener('keydown', (e) => state[e.key] = true);
-
-    		return (key) => state.hasOwnProperty(key) && state[key] || false;
-			})();
-		//----------------
-        setInterval(listenAndMove,1);
- 
-        function listenAndMove()
-        {
-			if (is_key_down('ArrowLeft')){
-				x--
-			}
-			if (is_key_down('ArrowRight')){
-				if( !(x > 52 && x < 332 && y > 52 && y < 131)){ 
-				x++
-				}
-			}
-			if (is_key_down('ArrowUp')){
-
-				if( !(y===131 && x > 100 && x < 332)){ 
-				y--
-				}
-			}
-				 
-			 
-			if (is_key_down('ArrowDown')){
-				if( !(y===48 && x > 100 && x < 332))
-				y++
-			}
-            pacman.style.left=x+"px";
-            pacman.style.top=y+"px";
-        }
-    </script> -->
+    <!-- <script src="pakscript2.js"></script>  -->
+   
 </html>

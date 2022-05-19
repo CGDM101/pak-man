@@ -1,24 +1,42 @@
+  
 let x=51;
 let y=51;
 let pinkyX=250
 let pinkyY=250
 let pinkyTargetX=250
 let pinkyTargetY=250
+let blinkyTargetX=450
+let blinkyTargetY=450
+let inkyX=350
+let inkyY=350
+let blinkyX=375
+let blinkyY=375
+let inkyTargetX=150
+let inkyTargetY=150
+let dir=0
+let oppositeDir=1
+let count=0
+let start=false
+ 
+function startgame(){
+	start=true
+	startscreen.className='hide'
+}
 
 keepGoing=true
 
 let maze = [
 [true,true ,true ,true ,true ,true ,true ,true ,true ,true],	
-[true,false,false,true,false,false,false,false,false,true],
-[true,false,false,true,false,false,false,false,false,true],
-[true,false,false,true,false,false,false,false,false,true],
-[true,false,true,true,false,false,false,false,false,true],
+[true,false,true ,false,true,false,false,false,false,true],
+[true,false,true ,false,true,false,true,false ,true,true],
+[true,false,false,false,true,true ,true ,false ,true,true],
+[true,true, true ,false,true,false,false,false,false,true],
+[true,false,false,false,false,false,true,true,false,true],
+[true,false,true ,false,true,false,true,false,false,true],
+[true,false,true ,true ,true,false,true,false,true,true],
 [true,false,false,false,false,false,false,false,false,true],
-[true,false,false,false,false,false,false,false,false,true],
-[true,false,false,false,false,true,false,false,false,true],
-[true,false,false,false,false,true,false,false,false,true],
 [true,true ,true ,true ,true ,true ,true ,true ,true ,true]
-] //2d array bool
+] 
 
 let visited =  [
 	[true,true ,true ,true ,true ,true ,true ,true ,true ,true],	
@@ -39,6 +57,8 @@ for (let a=0; a < 10 ; a++){
 	}
 }
  
+
+
 for (let i=0; i < 10 ; i++){
 	for(let j=0; j < 10 ; j++){
 
@@ -71,43 +91,215 @@ window.addEventListener('keydown', (e) => state[e.key] = true);
 	return (key) => state.hasOwnProperty(key) && state[key] || false;
 	})();
 //----------------
+
+function moveBlinky() {
+	let distance = getDistance(blinkyX,blinkyY,x,y)
+	if (distance < 150){ 
+		console.log("detected")
+		blinkyTargetX=x
+		blinkyTargetY=y 
+	 }
+	 
  
-setInterval(listenAndMove,1);
-// setInterval(moveGhosts,1);
+				if (  blinkyX === blinkyTargetX){
+					blinkyTargetX= Math.floor(Math.random() * 400) + 80
+				}
+				if (  blinkyY === blinkyTargetY){
+					blinkyTargetY= Math.floor(Math.random() * 400) +80
+ 				}
+				let coinFlip=Math.floor(Math.random() * 2) 
+			 
+				if (coinFlip===0){
+					if (blinkyTargetX > blinkyX){
+					blinkyX++
+					}
+					else{
+						blinkyX--
+					}
+				}
+				else{
+					if (blinkyTargetY > blinkyY){
+						blinkyY++
+						}
+						else{
+							blinkyY--
+						}
+				}
+}
+
+function getDistance (X,Y,x,y){
+return Math.sqrt((X-x)*(X-x)+ (Y-y)*(Y-y))
+}
+  function fightApathyOrDont(){
+	if (start){
+	listenAndMove()
+	}
+	else
+	{
+		// console.log("waiting...")
+	}
+  }
+ 
+// setInterval(listenAndMove,1);
+setInterval(fightApathyOrDont,1);
  
 function moveGhosts(){
-	// if ( pinkyY===pinkyTargetY && pinkyX === pinkyTargetX){
-	if (  pinkyX === pinkyTargetX){
-		pinkyTargetX= Math.floor(Math.random() * 400) + 80
-		// pinkyTargetY= Math.floor(Math.random() * 480);
-
-	}
-	if (  pinkyY === pinkyTargetY){
-		pinkyTargetY= Math.floor(Math.random() * 400) +80
-		// pinkyTargetY= Math.floor(Math.random() * 480);
-		
-	}
-	let coinFlip=Math.floor(Math.random() * 2) 
  
-	if (coinFlip===0){
-		if (pinkyTargetX > pinkyX){
-		pinkyX++
+		if (  inkyX === inkyTargetX){
+			inkyTargetX= Math.floor(Math.random() * 400) + 80
 		}
-		else{
-			pinkyX--
+		if (  inkyY === inkyTargetY){
+			inkyTargetY= Math.floor(Math.random() * 400) +80
 		}
-	}
-	else{
-		if (pinkyTargetY > pinkyY){
-			pinkyY++
+		let coinFlip=Math.floor(Math.random() * 2) 
+	 
+		if (coinFlip===0){
+			if (inkyTargetX > inkyX){
+			inkyX++
 			}
 			else{
-				pinkyY--
+				inkyX--
 			}
+		}
+		else{
+			if (inkyTargetY > inkyY){
+				inkyY++
+				}
+				else{
+					inkyY--
+				}
+		}
 	}
-// console.log("I do noting!")
-}
+
+function moveGhosts2(){
  
+		if (dir===0){
+			chooseDir(0)
+		}
+
+		function numDirs(){
+			let numblocked=0
+
+			let GTLx=Math.trunc(pinkyX/50)
+			let GTLy=Math.trunc(pinkyY/50)
+			let GTRx=Math.trunc((pinkyX+48)/50)
+			let GTRy=Math.trunc(pinkyY/50)
+			let GBLx=Math.trunc(pinkyX/50)
+			let GBLy=Math.trunc((pinkyY+48)/50)
+			let GBRx=Math.trunc((pinkyX+48)/50)
+			let GBRy=Math.trunc((pinkyY+48)/50)
+ 
+			return (numblocked)
+			
+		}
+
+	 function chooseDir(not) {
+		 count=0 
+			do{ 
+	 		dir=Math.floor(Math.random() * 4) + 1 
+ 
+			}while(   dir === not )
+ 			
+	 }
+
+	 let GTLx=Math.trunc(pinkyX/50)
+	 let GTLy=Math.trunc(pinkyY/50)
+	 let GTRx=Math.trunc((pinkyX+49)/50)
+	 let GTRy=Math.trunc(pinkyY/50)
+	 let GBLx=Math.trunc(pinkyX/50)
+	 let GBLy=Math.trunc((pinkyY+49)/50)
+	 let GBRx=Math.trunc((pinkyX+49)/50)
+	 let GBRy=Math.trunc((pinkyY+49)/50)
+
+	 function redefineGhost() {
+		  GTLx=Math.trunc(pinkyX/50)
+		  GTLy=Math.trunc(pinkyY/50)
+		  GTRx=Math.trunc((pinkyX+49)/50)
+		  GTRy=Math.trunc(pinkyY/50)
+		  GBLx=Math.trunc(pinkyX/50)
+		  GBLy=Math.trunc((pinkyY+49)/50)
+		  GBRx=Math.trunc((pinkyX+49)/50)
+		  GBRy=Math.trunc((pinkyY+49)/50)
+	}
+
+	count++
+	switch(dir){
+		case 1:
+ 
+ 
+				oppositeDir=2				
+			if ( !maze[ GTLy ][ GTLx ] && !maze[GBLy][GBLx] ){
+ 
+				pinkyX--
+				redefineGhost()
+				if(maze[ GTLy ][ GTLx ]  || maze[GBLy][GBLx]){
+ 
+					pinkyX+=1
+					chooseDir(oppositeDir)
+				}
+				if (count===100){
+					chooseDir(oppositeDir)
+				}
+				
+			}
+		break;
+		
+		case 2:
+ 
+
+			oppositeDir=1
+			if (  !maze[GTRy][GTRx] && !maze[GBRy][GBRx]){
+ 
+				pinkyX++
+				redefineGhost()
+				if(maze[GTRy][GTRx] || maze[GBRy][GBRx]){
+					pinkyX-=1
+					chooseDir(oppositeDir)
+				}
+				if (count===100){
+					chooseDir(oppositeDir)
+				}
+			}
+		break;
+
+		case 3:
+ 
+
+			oppositeDir=4
+			if (   !maze[GTLy][GTLx] && !maze[GTRy][GTRx]    ){
+ 
+				pinkyY--
+				redefineGhost()
+				if(maze[GTLy][GTLx]  || maze[GTRy][GTRx]){
+					pinkyY+=1
+					chooseDir(oppositeDir)
+				}
+				if (count===100){
+					chooseDir(oppositeDir)
+				}
+			}
+		break;
+
+		case 4:
+ 
+
+			oppositeDir=3
+			if (  !maze[GBLy][GBLx] && !maze[GBRy][GBRx]   ){
+
+					   pinkyY++
+					   redefineGhost()
+					   if(maze[GBLy][GBLx] || maze[GBRy][GBRx]){
+						  pinkyY-=1
+						  chooseDir(oppositeDir)
+					   }
+					   if (count===100){
+						chooseDir(oppositeDir)
+					}
+				   }		
+		break;
+	}
+ 
+}
 
 function checkVisited(){
 	for( let e=0 ; e <10 ; e++){
@@ -120,6 +312,8 @@ function checkVisited(){
 	return true
 }
 
+
+ 
 function listenAndMove()
 {
 	if (keepGoing && document.readyState === 'complete'){ 
@@ -144,7 +338,7 @@ function listenAndMove()
 	  BRx=Math.trunc((x+30)/50)
 	  BRy=Math.trunc((y+30)/50)	
 	}
-
+ 
  
 
 	// let TLx=(x)
@@ -160,25 +354,24 @@ function listenAndMove()
 	visited[TRy][TRx]=true
 	visited[BRy][BRx]=true
 	if (is_key_down('ArrowLeft')  && !maze[ TLy ][ TLx ] && !maze[BLy][BLx] ){
- 
+		pacman.className = 'left';
 		x--
 		redefine()
 		if(maze[ TLy ][ TLx ]  || maze[BLy][BLx]){
-			// console.log("this happens!")
 			x+=2
 		}
 	}
 	if (is_key_down('ArrowRight')  && !maze[TRy][TRx] && !maze[BRy][BRx]){
- 
+		pacman.className = 'right';
 		x++
 		redefine()
 		if(maze[TRy][TRx] || maze[BRy][BRx]){
 			x-=2
 		}
 	}
-	// && !maze[gridYminus][gridX] 
+ 
 	if (is_key_down('ArrowUp' )  && !maze[TLy][TLx] && !maze[TRy][TRx]    ){
-
+		pacman.className = 'up';
  
 		y--
 		redefine()
@@ -190,38 +383,50 @@ function listenAndMove()
 	 
 	if (is_key_down('ArrowDown'  )   && !maze[BLy][BLx] && !maze[BRy][BRx]   ){
  
+ pacman.className = 'down';
 		y++
 		redefine()
 		if(maze[BLy][BLx] || maze[BRy][BRx]){
 			y-=2
 		}
 	}
+	moveGhosts2()
+	let coinFlip2=Math.floor(Math.random() * 3)
+	if (coinFlip2===0){
 	moveGhosts()
+	}
+	else if (coinFlip2===1){
+		moveBlinky()
+	}
 	pacman.style.left=x+"px";
 	pacman.style.top=y+"px";
 	pinky.style.left=pinkyX+"px";
 	pinky.style.top=pinkyY+"px";
+	inky.style.left=inkyX+"px";
+	inky.style.top=inkyY+"px";
+ 
+	blinky.style.left=blinkyX+"px"; 
+	blinky.style.top=blinkyY+"px";		
+	circle.style.left=blinkyX-127+"px";
+	circle.style.top=blinkyY-127+"px";
 	let count=1
 	 
 	for ( let c=0; c <10 ; c++){
 			for (d=0; d<10;d++){
 				if ( visited[c][d] && !maze[c][d]){
-				// if ( maze[c][d]){
- 
-				// if (c===2 && d===2){
-					//const third = document.querySelector('#parent :nth-child(3)');
 					let child=document.querySelector('#inner-labyrinth :nth-child('+count+')')
-					// console.log("count:",count,"c",c,"d",d, "child",child)
 					child.src="empty.png"
 				}
 				count++
 			}
 		
 	}
-
-	// console.log("x+15:",x+15,"pinkyX +24:",pinkyX+24,"y+15:",y+15,"pinkyY+24:",pinkyY +24)
-	if( Math.abs((x+15) - (pinkyX +24 )  ) < 33 &&  Math.abs((y+15)-(pinkyY +25 )   )< 33 ){
-		// console.log("x,pinkyX,y,pinkyY",x,pinkyX,y,pinkyY)
+	if  
+	( 
+		Math.abs((x+15) - (pinkyX +24 )  ) < 33 &&  Math.abs((y+15)-(pinkyY +25 )   )< 33 
+	)
+		
+	{
 	 keepGoing=false
 	 
 	alert("Game Over");
@@ -229,8 +434,10 @@ function listenAndMove()
 	}
 	let status=checkVisited()
 	if (status ){
+		keepGoing=false
 		alert("You Beat the Game!");
 		window.location.reload(true);
 	}
  } 
 }
+ 

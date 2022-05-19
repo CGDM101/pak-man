@@ -10,16 +10,25 @@ body
 	width: 500px;
 	height: 500px;
 	background-color: #000000;
-	border: 5px ridge  whitesmoke;
+	/* border: 5px ridge  whitesmoke; */
+	border: 5px ridge  rgb(230, 18, 67);
 }
 
 .pacman
 {
+ 
 	position: absolute;
 	top: 51px;
 	left: 51px;
-
+ 
 	color: #ffffff;
+	transform: rotate(45deg);
+	/* position: static;
+	transform: rotate(145deg); */
+}
+
+#pakimg {
+	transform: rotate(45deg);
 }
 .inky
 {

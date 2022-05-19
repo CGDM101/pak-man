@@ -1,6 +1,6 @@
 let x=51;
 let y=51;
-
+let direction="right"
  
 let maze = [
 [true,true ,true ,true ,true ,true ,true ,true ,true ,true],	
@@ -77,26 +77,28 @@ function listenAndMove()
 
 
 	if (is_key_down('ArrowLeft')  && !maze[ TLy ][ TLx ] && !maze[BLy][BLx] ){
- 
+		direction="left"
 		x--
 		redefine()
 		if(maze[ TLy ][ TLx ]  || maze[BLy][BLx]){
 			// console.log("this happens!")
 			x+=2
 		}
+
 	}
 	if (is_key_down('ArrowRight')  && !maze[TRy][TRx] && !maze[BRy][BRx]){
- 
+		direction="right"
 		x++
 		redefine()
 		if(maze[TRy][TRx] || maze[BRy][BRx]){
 			x-=2
 		}
+ 
 	}
  
 	if (is_key_down('ArrowUp' )  && !maze[TLy][TLx] && !maze[TRy][TRx]    ){
 
- 
+		direction="up"
 		y--
 		redefine()
 		if(maze[TLy][TLx]  || maze[TRy][TRx]){
@@ -106,13 +108,22 @@ function listenAndMove()
 		 
 	 
 	if (is_key_down('ArrowDown'  )   && !maze[BLy][BLx] && !maze[BRy][BRx]   ){
- 
+
+		direction="down"
+		// console.log("This doesn't happen?")
 		y++
+		// document.getElementById("pacimg").style.display="none";
+		// console.log(document.getElementById("pacimg"))
 		redefine()
 		if(maze[BLy][BLx] || maze[BRy][BRx]){
 			y-=2
 		}
+ 
+ 
 	}
+
+	// function addNewClass(elem){   elem.className="newClass"; }
+ 
 	pacman.style.left=x+"px";
 	pacman.style.top=y+"px";
 }
