@@ -1,9 +1,9 @@
-function Spel1 () {
 
-    return(
-        <div>
-            <p>Spel 1</p>
-        </div>
-    )
-}
-export default Spel1
+function Spel1() {
+  return (
+	<div>
+	  <h1>Spel 1</h1>
+	  
+	  </div>
+  )}
+  

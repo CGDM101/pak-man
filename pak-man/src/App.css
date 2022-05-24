@@ -1,6 +1,5 @@
 body{
-  background-color: #d8dede;
-  background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
+  background-color: #ffffff;
 }
 
 
@@ -8,31 +7,109 @@ main {
   display: grid;
   grid-template-areas: 
     "topbar  topbar   topbar"
-    "ads     content  sidebar"
+    "sidebar     content  ads"
     "footer  footer   footer";
 
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 70px 27em 70px;
-
-    align-items: center;
-    justify-items: center;
-  ;
+    grid-template-rows: auto 100% 70px;
 
 }
 
-header  {grid-area: topbar;}
-aside   {grid-area: ads;}
-article {grid-area: content;}
-nav     {grid-area: sidebar;}
-footer  {grid-area: footer;}
+header  {
+  grid-area: topbar;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: #070706;
+  color: #2c8c2b;
+  width: 100%;
+  height: 150px;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 3rem;
+}
 
 
+nav     {
+  grid-area: sidebar;
+  padding-top: 40px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
 
-.App {
+
+nav a{
+  display: block;
+  margin: 15px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color: #2c8c2b;
+  color: #ffffff;
+  width: 10em;
+  height: 1em;
+  cursor: pointer ;
   text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+article {
+  grid-area: content;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5em;
+  align-content: flex-start ;
+  justify-content: start;
+  justify-items: stretch;
+}
+
+article img{
+  width: 10em;
+  height: 10em;
+}
+
+article a {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 35px;
+  margin-top:50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 10em;
+  height: 10em;
+  cursor: pointer ;
+  cursor: pointer ;
+  text-align: center;
+  text-decoration: none;
 }
 
 
+aside   {
+  grid-area: ads;
+}
+
+aside div{
+  padding: 10px;
+  margin:  15px;
+}
+
+footer  {
+  grid-area: footer;
+  border-top: #282c34 solid 2px;
+}
+
+
+
+/* .App {
+  text-align: center;
+} */
+
+.title{
+  padding: 10px;
+  margin:  15px;
+}
 
 .App-header {
   background-color: #282c34;

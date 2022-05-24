@@ -1,8 +1,9 @@
 import './App.css'
 import {BrowserRouter as Router, NavLink, Routes, Route, Navigate} from 'react-router-dom'
-import Spel1 from './components/Spel1'
 import Spel2 from './components/Spel2'
 import Start from './components/Start'
+import YatzyComponent from './components/Yatze/Yatzy'
+import AboutUs from './components/AboutUs/AboutUs'
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
     <div>
       <Routes>
           <Route path="/" element={<Start />} />
-          <Route path="/Spel1" element={<Spel1/>} />
-          <Route path="/Spel2" element={<Spel2/>} />
+          <Route path="/yatzy" element={<YatzyComponent />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
     </div>
   </Router>
