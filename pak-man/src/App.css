@@ -6,31 +6,89 @@ body{
 main {
   display: grid;
   grid-template-areas: 
-    "topbar  topbar   topbar"
-    "sidebar     content  ads"
-    "footer  footer   footer";
+    "topbar topbar  topbar   topbar"
+    "sidemenu sidebar content  ads"
+    "footer footer  footer   footer";
 
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: auto 1fr 3fr 1fr;
     grid-template-rows: auto 100% 70px;
 
 }
 
-header  {
+/* Header */
+
+header {
   grid-area: topbar;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  display: flex;
   align-items: center;
-  background-color: #070706;
-  color: #2c8c2b;
+  background-color: #242424;
   width: 100%;
   height: 150px;
-  font-family: 'Silkscreen', sans-serif;
-  font-size: 3rem;
 }
 
 
-nav     {
+
+.header-right-side{
+  flex-grow: 2;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.header-left-side{
+  flex-grow: 1;
+  text-align: center;
+}
+
+header .title{
+  flex-grow: 2;
+  text-align: center;
+  color: darkgreen;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 6rem;
+}
+
+header .links {
+  margin: 15px;
+  color: #ffffff;
+  cursor: pointer ;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+header img{
+  max-width: 250px;
+}
+
+.hamburger-menu{
+  margin-left: 20px;
+}
+
+/* ------------------------- */
+
+menu{
+  grid-area: sidemenu;
+  background-color: #242424;
+  width: auto;
+  height: 100%;
+  margin-top: 0px;
+  margin-right: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+menu a{
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  color: #ffffff;
+  width: 10em;
+  cursor: pointer ;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Nav - left side bar */
+nav {
   grid-area: sidebar;
   padding-top: 40px;
   align-items: center;
@@ -55,6 +113,11 @@ nav a{
   text-decoration: none;
 }
 
+/* -------------------------- */
+
+
+
+/* Article - Middle of the page */
 article {
   grid-area: content;
   display: flex;
@@ -85,7 +148,17 @@ article a {
   text-decoration: none;
 }
 
+.about-arti{
+  justify-content: center;
+  font-size: 1.5rem;
+}
 
+.about-style{
+  font-size: 1.5rem;
+}
+/* -------------------- */
+
+/* Right side  */
 aside   {
   grid-area: ads;
 }
@@ -94,10 +167,14 @@ aside div{
   padding: 10px;
   margin:  15px;
 }
+/* ----------------- */
+
+/* Footer */
 
 footer  {
   grid-area: footer;
   border-top: #282c34 solid 2px;
+  text-align: center;
 }
 
 
@@ -106,12 +183,12 @@ footer  {
   text-align: center;
 } */
 
-.title{
+/* .title{
   padding: 10px;
   margin:  15px;
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -120,5 +197,5 @@ footer  {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
