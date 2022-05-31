@@ -14,10 +14,10 @@ function AboutUs () {
             <h1>Om oss</h1>
             <p>
                 <b> Vår vision är enkel:</b> alla ska kunna spela spel oavsett dator.
-                Allt du behöver är en internetuppkoppling. På Spelhubb kan du spela spel som är lätta att komma igång och spela, men svåra att bemästra. Allt med en retrokänsla!
-            </p>
-            <p>Är det något du saknar på Spelhubb? Ta gärna kontakt med oss: </p>
-            <p>hej@spelhubb.se</p>
+                Allt du behöver är en internetuppkoppling. På Spelhubb kan du spela spel som är lätta att komma igång och spela, men svåra att bemästra. Allt med en retrokänsla! <br />
+            
+            Är det något du saknar på Spelhubb? Ta gärna kontakt med oss: </p> 
+            hej@spelhubb.se
           </article>
 
           <Menu />

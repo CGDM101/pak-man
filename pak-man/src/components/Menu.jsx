@@ -15,7 +15,7 @@ function Menu () {
         <menu>  
            <NavLink className="links"  to="/">Start</NavLink>
            <NavLink className="links"  to="/about">Om oss</NavLink>
-		   <a href="">kategori</a>
+		   {/* <a href="">kategori</a> */}
         </menu>
       )
     }
