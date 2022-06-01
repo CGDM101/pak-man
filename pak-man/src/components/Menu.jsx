@@ -15,7 +15,13 @@ function Menu () {
         <menu>  
            <NavLink className="links"  to="/">Start</NavLink>
            <NavLink className="links"  to="/about">Om oss</NavLink>
-		   {/* <a href="">kategori</a> */}
+		   <p>kategori :</p>
+
+		   <ul>
+		     <NavLink className="links"  to="/ourgames">Våra spel</NavLink>
+           	 <NavLink className="links"  to="/externalgames">Externa spel</NavLink>
+		   </ul>
+		  	 
         </menu>
       )
     }

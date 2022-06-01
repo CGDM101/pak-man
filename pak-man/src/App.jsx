@@ -4,6 +4,8 @@ import TheMenu from './components/TheMenu'
 import Start from './components/Start'
 import YatzyComponent from './components/Yatze/Yatzy'
 import AboutUs from './components/AboutUs/AboutUs'
+import OurGames from './components/Ourgames'
+import ExternalGames from './components/Externalgames'
 
 function App() {
 
@@ -16,31 +18,13 @@ function App() {
           <Route path="/" element={<Start />} />
           <Route path="/yatzy" element={<YatzyComponent />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/ourgames" element={<OurGames />} />
+          <Route path="/externalgames" element={<ExternalGames />} />
         </Routes>
         </TheMenu>
     </div>
   </Router>
-
-
-    // <Router>
-    //   <div>
-    //     <header>
-    //       <NavLink to=""> Startsida </NavLink>
-    //       <NavLink to="/spel1"> Spel 1 </NavLink>
-    //       <NavLink to="/spel2"> Spel 2 </NavLink>
-    //     </header>
-    //     <main>
-    //       <Routes>
-    //         <Route path="/spel1" element={<Spel1 />} />
-    //         <Route path="/spel2" elememt={<Spel2 />} />
-    //         <Route path="/" element={<Start />} />
-    //       </Routes>
-    //     </main>
-    //     <footer>
-    //       <p> Om oss... </p>
-    //     </footer>
-    //   </div>
-    // </Router>
+    
   )
 }
 
