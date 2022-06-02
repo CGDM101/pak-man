@@ -4,7 +4,9 @@ import imgtictactoe from '../img/imgtictactoe.jpg'
 import imgbattleship from '../img/imgbattleship.jpg'
 import imgspaceinvaers from '../img/imgspaceinvaers.jpg'
 import imgpong from '../img/imgpong.jpg'
-import imgyatzy from '../img/imgyatzy.jpg'
+import imgmoonlander from '../img/imgmoonlander.jpg'
+
+
 
 const Games = [
 	{
@@ -17,14 +19,6 @@ const Games = [
 	},
 	{
 		ip: 2,
-		name: 'YATZY',
-		type: true,
-		category: 'our',
-		url: '/yatzy',
-		img: imgyatzy
-	},
-	{
-		ip: 3,
 		name: 'SNAKE',
 		type: false,
 		category: 'external',
@@ -32,12 +26,20 @@ const Games = [
 		img: imgsnake
 	},
 	{
-		ip: 4,
+		ip: 3,
 		name: 'TIC-TAC-TOE',
 		type: false,
 		category: 'our',
 		url: 'https://preeminent-profiterole-bd5575.netlify.app/',
 		img: imgtictactoe
+	},
+	{
+		ip: 4,
+		name: 'MOONLANDER',
+		type: false,
+		category: 'our',
+		url: 'https://comforting-donut-7b052c.netlify.app/',
+		img: imgmoonlander
 	},
 	{
 		

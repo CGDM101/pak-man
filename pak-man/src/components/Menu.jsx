@@ -34,7 +34,7 @@ function Menu () {
         <menu>  
            <NavLink className="links"  to="/">Start</NavLink>
            <NavLink className="links"  to="/about">Om oss</NavLink>
-		   <button className='menu-button' type="button" onClick={() => setCategory(!category)}>kategori</button>
+		   <button className='menu-button' type="button" onClick={() => setCategory(!category)}>Kategori</button>
 
 		  {displayCategory()}
 		  	 
