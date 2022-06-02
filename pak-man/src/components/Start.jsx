@@ -14,7 +14,7 @@ function Start () {
            <div>
         <main>
           <Header />
-          <article>
+          <article className='article-icons'>
 
     {/* If...else statement  Shorthand */}  
                             {/*game.type === true ?  */}

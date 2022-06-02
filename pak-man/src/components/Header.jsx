@@ -14,24 +14,7 @@ function Header () {
 		<header>
            <div className='hamburger-menu'>
               <Hamburger color="#ffffff"  toggled={isOpen} toggle={setOpen}/>
-              
-
-              
-              {/* // onToggle= { () => {
-              //   if (isOpen === true) {
-              //     return(
-              //       <h1>open a menu</h1>
-              //     )
-                  
-              //   } else {
-              //     return(
-              //       <h1>open a menu</h1>
-              //     )
-                  
-              //   }
-              // }}  */}
-
-              
+                           
            </div>
        
 
