@@ -26,7 +26,7 @@ body
 	color: #ffffff;
 }
 #startscreen {
-	font-size:12px;color: #cccccc;
+	font-size:8px;color: #cccccc;
 	text-decoration:none; font-weight:normal;
 	font-size: 16px; font-family: Impact;color: #32CD32; text-shadow:0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #32CD32,0 0 70px #32CD32,0 0 80px #32CD32,0 0 100px #32CD32,0 0 170px #32CD32;text-align:center; line-height:20px;
 	position: absolute;
@@ -41,6 +41,7 @@ body
 
  #circle{
 	 position: absolute;
+	 display:none;
 	 top: 150 px;
 	 left: 150px;
  }
@@ -49,6 +50,9 @@ body
  
 #startscreen.hide{
 	display:none
+}
+#pak-table {
+	margin-left: 30px;
 }
 #startbutton{
 	padding: 10px;
@@ -63,14 +67,14 @@ body
 	color: #32CD32; text-shadow:0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #32CD32,0 0 70px #32CD32,0 0 80px #32CD32,0 0 100px #32CD32,0 0 170px #32CD32;text-align:center; line-height:20px;
 	font-size:30px;
 	position: absolute;
-	top: 230px;
+	top: 350px;
 	left: 180px;
 }
 #paktext{
 	position: absolute;
 	text-align: center;
 	padding:50px;
-	top: 100px;
+	top: 20px;
 
 }
 #pacman.up {

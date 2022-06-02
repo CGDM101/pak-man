@@ -406,7 +406,8 @@ function listenAndMove()
 	inky.style.top=inkyY+"px";
  
 	blinky.style.left=blinkyX+"px"; 
-	blinky.style.top=blinkyY+"px";		
+	blinky.style.top=blinkyY+"px";	
+	circle.style.display="inline"
 	circle.style.left=blinkyX-127+"px";
 	circle.style.top=blinkyY-127+"px";
 	let count=1
@@ -424,6 +425,10 @@ function listenAndMove()
 	if  
 	( 
 		Math.abs((x+15) - (pinkyX +24 )  ) < 33 &&  Math.abs((y+15)-(pinkyY +25 )   )< 33 
+		||
+		Math.abs((x+15) - (inkyX +24 )  ) < 33 &&  Math.abs((y+15)-(inkyY +25 )   )< 33 
+		||
+		Math.abs((x+15) - (blinkyX +24 )  ) < 33 &&  Math.abs((y+15)-(blinkyY +25 )   )< 33 
 	)
 		
 	{

@@ -8,8 +8,22 @@
    
     <body>
         <div id="startscreen">
-            <div id="paktext">use the arrow keys to help Pak-Man eat all the orange pills,
-                while avoiding the ghosts.
+            <div id="paktext">
+                <p> 
+                Hjälp Pak-Man äta alla pillren. 
+                Styr Pak-Man med piltangenterna 
+                
+                Undvik att bli uppäten av spöken. </p>
+                det finns tre spöken:<br>
+                <table id="pak-table">
+                    <tr><td><img src="Inky.png"/></td><td><img src="Pinky.png"/></td><td><img src="blinky.png"/></td></tr>
+                    <tr>
+                        <td>Inky kan gå genom väggar och irrar runt planlöst</td>
+                        <td>Pinky kan inte gå genom väggar och irrar runt i korridorerna</td>
+                        <td>Blinky kan gå genom väggar och kommer jaga dig om du är inom hans detektionsradius som visas med en cirkel</td>
+                      </tr>
+                </table>
+ 
             </div>
             <!-- <h1>PRESS ANY KEY TO START</h1> -->
             <button id="startbutton" onclick="startgame()">START</button> 
