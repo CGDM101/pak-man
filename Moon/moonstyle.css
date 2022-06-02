@@ -5,9 +5,17 @@ body
 .hide {
 	display: none;
 }
-#info-box *{
+#intro {
+	color:bisque;
+	background-color: #000000;
+	
+}
+#intro a {
+	color:azure;
+}
+#info-box {
 	position: absolute;
-	top:150px;
+	top:50px;
 	left: 300px;
 	height:500px;
 	width: 500px;
