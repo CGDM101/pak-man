@@ -16,35 +16,16 @@ function Start () {
           <Header />
           <article className='article-icons'>
 
-    {/* If...else statement  Shorthand */}  
-                            {/*game.type === true ?  */}
+    
               {Games.map(game =>    
                 <a target="_blank" key={game.id} href={game.url}><img src={game.img} alt=""/>{game.name}</a>
                 )}
-            
-    {/*----------- If...else statement  Longhand *-----------------/}
-
-              {/* {Games.map(game => {
-                if (game.type === true){
-                  return(
-                    <NavLink target="_blank" to={game.url}><img src={game.img} alt=""/>{game.name}
-                    </NavLink>
-                  )
-                }else{
-                  return(
-                    <a target="_blank" href={game.url}><img src={game.img} alt=""/>{game.name}</a>
-                    )
-                  }
-                })} */}
             
           </article>
 
           <Menu />
 
-          {/* {displayResults()} */}
-          
           <nav>
-                           {/*game.type === true ?  */}
               {Games.map(game =>    
                 <a target="_blank" key={game.id} href={game.url}>{game.name}</a>
                 )}

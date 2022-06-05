@@ -24,8 +24,6 @@ function OurGames () {
 						:null
 						))}
 		   </div>
-
-			
            
           </article>
 

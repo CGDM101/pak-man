@@ -102,7 +102,6 @@ menu a{
   font-size: larger;
   text-align: center;
   text-decoration: none;
-  cursor: url(./use75.cur), auto;
 }
 
 menu p{
@@ -126,7 +125,6 @@ menu p{
   font-size: larger;
   text-align: center;
   text-decoration: none;
-  cursor: url(./use75.cur), auto;
   
 }
 
@@ -153,7 +151,6 @@ nav a{
   text-align: center;
   border-radius: 4px;
   text-decoration: none;
-  cursor: url(./use75.cur), auto;
 }
 
 /* -------------------------- */
@@ -176,7 +173,6 @@ article {
   align-content: flex-start ;
   justify-content: start;
   justify-items: stretch;
-  cursor: url(./use75.cur), auto;
 }
 
 article img{
@@ -207,7 +203,6 @@ article a {
   cursor: pointer ;
   text-align: center;
   text-decoration: none;
-  cursor: url(./use75.cur), auto;
 }
 
 .about-arti{
